@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeY-qC-Wbd" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="99.5" y="244" width="215" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="frZ-ii-5Qd"/>
+                                </constraints>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-4h-5Uq" customClass="GIDSignInButton">
+                                <rect key="frame" x="99.5" y="308" width="215" height="44"/>
+                                <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WTQ-fI-ZDq"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="googleClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E43-F8-ag6"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYh-lx-81n">
+                                <rect key="frame" x="99.5" y="372" width="215" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="Srn-q0-fmZ"/>
+                                    <constraint firstAttribute="height" constant="44" id="dtz-8i-IYU"/>
+                                </constraints>
+                                <state key="normal" image="Sign-in-Large---Hover"/>
+                                <connections>
+                                    <action selector="linkedInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFl-7C-CKH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGt-tm-MhE">
+                                <rect key="frame" x="324.5" y="377" width="52" height="34"/>
+                                <state key="normal" title="logout"/>
+                                <connections>
+                                    <action selector="linkedInLogoutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H9s-X9-flE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40E-4b-T7f" customClass="ASAuthorizationAppleIDButton">
+                                <rect key="frame" x="99.5" y="436" width="215" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Cv3-xo-iOW"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-Yw-N1S">
+                                <rect key="frame" x="99.5" y="500" width="215" height="44"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.58823529409999997" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xBu-Tf-VSd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Login with Instagram"/>
+                                <connections>
+                                    <action selector="instagramClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSg-6x-HY3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eeY-qC-Wbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6KO-hZ-NZT"/>
+                            <constraint firstItem="GjG-Yw-N1S" firstAttribute="top" secondItem="40E-4b-T7f" secondAttribute="bottom" constant="20" id="6PX-a6-9cX"/>
+                            <constraint firstItem="wYh-lx-81n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6c4-tg-q1U"/>
+                            <constraint firstItem="caZ-4h-5Uq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7LZ-IH-l97"/>
+                            <constraint firstItem="eeY-qC-Wbd" firstAttribute="width" secondItem="wYh-lx-81n" secondAttribute="width" id="Ajq-Ub-gz6"/>
+                            <constraint firstItem="GjG-Yw-N1S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ioy-Pp-gC3"/>
+                            <constraint firstItem="GjG-Yw-N1S" firstAttribute="width" secondItem="40E-4b-T7f" secondAttribute="width" id="Pij-d8-cwb"/>
+                            <constraint firstItem="caZ-4h-5Uq" firstAttribute="top" secondItem="eeY-qC-Wbd" secondAttribute="bottom" constant="20" id="TfY-6s-wWy"/>
+                            <constraint firstItem="40E-4b-T7f" firstAttribute="trailing" secondItem="wYh-lx-81n" secondAttribute="trailing" id="Xj9-Vh-3aS"/>
+                            <constraint firstItem="PGt-tm-MhE" firstAttribute="centerY" secondItem="wYh-lx-81n" secondAttribute="centerY" id="eL6-KX-mIC"/>
+                            <constraint firstItem="caZ-4h-5Uq" firstAttribute="width" secondItem="wYh-lx-81n" secondAttribute="width" id="fCg-DA-7xT"/>
+                            <constraint firstItem="wYh-lx-81n" firstAttribute="top" secondItem="caZ-4h-5Uq" secondAttribute="bottom" constant="20" id="gto-4Z-Qxx"/>
+                            <constraint firstItem="40E-4b-T7f" firstAttribute="top" secondItem="wYh-lx-81n" secondAttribute="bottom" constant="20" id="hsX-qh-8Bv"/>
+                            <constraint firstItem="40E-4b-T7f" firstAttribute="leading" secondItem="wYh-lx-81n" secondAttribute="leading" id="mkQ-So-nXC"/>
+                            <constraint firstItem="PGt-tm-MhE" firstAttribute="leading" secondItem="wYh-lx-81n" secondAttribute="trailing" constant="10" id="tFv-tI-f6u"/>
+                            <constraint firstItem="eeY-qC-Wbd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="uad-g0-Efc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="appleSignInBtn" destination="40E-4b-T7f" id="fVT-tL-d1c"/>
+                        <outlet property="fbButton" destination="eeY-qC-Wbd" id="Ep9-GZ-RWK"/>
+                        <outlet property="linkedInBtn" destination="wYh-lx-81n" id="4hn-hq-pIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Sign-in-Large---Hover" width="215" height="41"/>
+    </resources>
+</document>
